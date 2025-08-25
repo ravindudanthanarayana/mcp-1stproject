@@ -1,0 +1,23 @@
+{
+  "name": "MyMCPServer",
+  "description": "A local MCP server with RAG capabilities and web search",
+  "version": "1.0.0",
+  "command": "uv run run_mcp_server.py",
+  "working_directory": "/Users/priyalaruna/Src/Demos/MCP/Local-MCP",
+  "tools": [
+    {
+      "name": "rag",
+      "description": "Use a simple RAG workflow to answer queries using documents from data directory",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The query to ask about the documents"
+          }
+        },
+        "required": ["query"]
+      }
+    }
+  ]
+} 
